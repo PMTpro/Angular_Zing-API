@@ -1,0 +1,96 @@
+
+.list-group-view {
+
+}
+
+.list-group-view > .chart-item + .chart-item {
+  border-top: 1px solid #efefef;
+}
+
+.container-md {
+  max-width: 960px;
+}
+
+.thumb {
+  border-radius: 6px;
+}
+
+.thumb img {
+  border-radius: 6px;
+}
+
+.chart-item {
+  padding: 10px;
+}
+
+.chart-item .thumb {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.chart-item:hover {
+  background: rgb(174 174 174 / 19%);
+}
+
+.chart-item .sort-number {
+  width: 50px;
+  padding-right: 5px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.chart-item .thumb-40 {
+  margin-right: 10px;
+}
+
+.chart-item .title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.36;
+  color: #32323d;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chart-item .title a {
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+  white-space: nowrap;
+}
+
+.chart-item .title a:hover {
+  color: #a20ecb;
+}
+
+.chart-item .artist a {
+  color: #9d9d9d;
+}
+
+.chart-item .artist a:hover {
+  color: #a20ecb;
+}
+
+
+.list-group-view li.chart-item.first .sort-number {
+  color: #1f86ff;
+}
+
+.list-group-view li.chart-item.second .sort-number, .green-light {
+  color: #2fb698;
+}
+
+.list-group-view li.chart-item.third .sort-number, .red-light {
+  color: #ff2f01;
+}
+
+.text-smart {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

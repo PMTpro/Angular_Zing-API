@@ -1,0 +1,149 @@
+.music-controls {
+  height: 70px;
+  box-shadow: 0 0 3px rgb(0 0 0 / 16%), 0 0 10px rgb(0 0 0 / 16%)
+}
+
+.m-btn-previous, .m-btn-next {
+  border-radius: 50%;
+  padding: 2px;
+  color: #666666;
+  cursor: pointer;
+}
+
+.m-btn-previous:hover, .m-btn-next:hover {
+  background: rgb(157 157 157 / 18%);
+}
+
+.m-btn-play {
+  border: 1px solid #666666;
+  color: #666666;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.m-btn-play:hover {
+  border: 1px solid #3F51B5;
+  color: #3F51B5;
+}
+
+.m-play-info .m-play-detail {
+  margin-left: 60px;
+  margin-top: -7px;
+  font-size: 13px;
+}
+
+.m-play-info .thumb img {
+  box-shadow: 0 0 3px rgb(0 0 0 / 19%), 0 0 10px rgb(0 0 0 / 22%);
+}
+
+.m-song-time-number {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.m-song-time-number .z-duration-time {
+  color: #7f7f7f;
+}
+
+.m-play-info .m-play-detail .title {
+  color: #000000;
+  font-weight: 500;
+}
+
+.m-play-info .m-play-detail .artist {
+  color: #7b7b7b;
+}
+
+.volume-slider {
+  width: 85px
+}
+
+.slider:hover {
+  cursor: pointer
+}
+
+.slider__bar {
+  width: 100%;
+  height: 5px;
+  outline: 0;
+  background-color: #ECEFF1;
+  user-select: none;
+}
+
+.slider__bar__fill {
+  position: relative;
+  height: 100%;
+  background-color: #ff8178;
+}
+
+.slider__handle {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  width: 12px;
+  height: 12px;
+  background-color: #F44336;
+  border-radius: 50%;
+  border: 1px solid #F44336;
+  outline: 0;
+}
+
+.slider__handle:hover {
+  top: -5px;
+  right: -7px;
+  width: 14px;
+  height: 14px;
+}
+
+.player__section--seek {
+  flex: 1 1;
+}
+
+.player__section--volume {
+  width: 135px;
+  margin-top: 8px
+}
+
+.player__section--volume .slider__handle {
+  width: 13px;
+  height: 13px;
+  top: -5px;
+  background-color: #fcfcfc;
+  border: none;
+}
+
+.z-volume-fullscreen {
+  display: inline-block;
+  width: 100px;
+  margin-left: 12px;
+  margin-bottom: 7.5px
+}
+
+.slider .slider__bar__buffer {
+  display: none;
+}
+
+.slider.slider-buffer .slider__bar {
+  position: relative
+}
+
+.slider.slider-buffer .slider__bar .slider__bar__buffer {
+  display: block;
+  width: 70%;
+  height: 100%;
+  background-color: #c7c7c7;
+  position: absolute;
+  top: 0
+}
+
+.slider.slider-buffer .slider__bar .slider__bar__fill {
+  z-index: 10
+}
+
+.player-time-light .slider__bar {
+  background-color: #e7e7e7
+}
+
+.player-time-light .slider.slider-buffer .slider__bar .slider__bar__buffer {
+  background-color: hsla(0, 0%, 62.7%, .24)
+}

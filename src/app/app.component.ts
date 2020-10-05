@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+	selector: 'main',
+	templateUrl: './app.component.html',
+	encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  title = 'TCloud';
+	onActivate(event) {
+		window.scroll(0,0);
+	}
 }

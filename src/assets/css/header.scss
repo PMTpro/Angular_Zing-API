@@ -1,0 +1,16 @@
+header.navbar {
+	padding: 0;
+	.h-nav {
+		font-weight: 500;
+	}
+	.h-nav .nav-item a {
+		color: #32323d;
+	}
+	.h-nav .nav-item.active {
+		background: #f7f7f7;
+	}
+
+	.navbar-brand {
+		color: #F44336 !important;
+	}
+}

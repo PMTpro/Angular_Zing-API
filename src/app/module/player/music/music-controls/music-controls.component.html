@@ -1,0 +1,66 @@
+<div class="container-xl d-flex align-items-center h-100">
+	<div class="m-play-controls d-flex align-items-center h-100 mr-5">
+		<a class="m-btn-previous mr-4">
+			<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-skip-start" fill="currentColor"
+			     xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" d="M4.5 3.5A.5.5 0 0 0 4 4v8a.5.5 0 0 0 1 0V4a.5.5 0 0 0-.5-.5z"/>
+				<path fill-rule="evenodd"
+				      d="M5.696 8L11.5 4.633v6.734L5.696 8zm-.792-.696a.802.802 0 0 0 0 1.392l6.363 3.692c.52.302 1.233-.043 1.233-.696V4.308c0-.653-.713-.998-1.233-.696L4.904 7.304z"/>
+			</svg>
+		</a>
+
+		<a class="m-btn-play">
+			<svg (click)="onPlay()" *ngIf="audio.el_audio.paused" style="margin-left: 2px;margin-right: -2px;" width="3em" height="3em" viewBox="0 0 16 16"
+			     class="bi bi-play" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd"
+				      d="M10.804 8L5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+			</svg>
+
+			<svg (click)="onPause()" *ngIf="audio.el_audio.paused === false" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-pause" fill="currentColor"
+			     xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd"
+				      d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"/>
+			</svg>
+		</a>
+
+		<a class="m-btn-next ml-4">
+			<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-skip-end" fill="currentColor"
+			     xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" d="M12 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"/>
+				<path fill-rule="evenodd"
+				      d="M10.804 8L5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+			</svg>
+		</a>
+	</div>
+	<div class="m-play-info d-flex align-items-center h-100 w-100">
+		<div class="thumb position-absolute" style="width: 50px;height: 50px;">
+			<img class="w-100" #thumb />
+		</div>
+		<div class="m-play-detail w-100 d-flex flex-column">
+			<div class="d-flex mb-1">
+				<div>
+					<span class="title" #title></span> -
+					<span class="artist" #artist></span>
+				</div>
+				<div class="ml-auto m-song-time-number">
+					<span class="z-time z-playing-time" #playing_time>00:00</span> /
+					<span class="z-time z-duration-time" #duration>00:00</span>
+				</div>
+			</div>
+			<div class="m-song-time position-relative">
+				<div class="player__section w-100 position-absolute">
+					<div class="slider slider-buffer" tabindex="0">
+						<div class="slider__bar" (click)="onSliderBarClick($event)" #slider_bar>
+							<div class="slider__bar__fill" style="width: 0%;" #slider_bar_fill>
+								<div class="slider__handle" tabindex="0" (mousedown)="onSliderHandleMouseDown($event)"></div>
+							</div>
+							<div class="slider__bar__buffer" #slider__bar__buffer style="width: 0%;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="m-play-controls d-flex align-items-center h-100">
+	</div>
+</div>

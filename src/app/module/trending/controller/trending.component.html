@@ -1,0 +1,7 @@
+<section class="container-md">
+	<div *ngIf="data && data.err === 0">
+		<ul class="list-group-view">
+			<li *ngFor="let item of data.data.items, index as i" class="d-flex chart-item" [index]="i" [className]="(i == 0 ? 'first' : i == 1 ? 'second' : i == 2 ? 'third' : '') + ' d-flex chart-item'"></li>
+		</ul>
+	</div>
+</section>

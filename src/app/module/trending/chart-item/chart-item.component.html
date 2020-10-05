@@ -1,0 +1,59 @@
+<div class="d-flex mr-3">
+	<div class="d-flex align-items-center">
+		<div class="sort-number" [textContent]="index + 1"></div>
+	</div>
+</div>
+<div class="thumb" (click)="playSong()">
+	<div class="image" data-action="play">
+		<img [defaultImage]="'/assets/audio_default.png'" [lazyLoad]="song.thumbnail" class="w-100" [alt]="song.title"/>
+	</div>
+	<span class="opac" data-action="play">
+		</span>
+	<i data-action="play" class="icon ic-play-circle-outline">
+	</i>
+</div>
+<div class="ml-2 card-info text-smart d-flex align-content-center justify-content-center flex-column">
+	<div class="title">
+		<a [title]="song.title">{{ song.title }}</a>
+	</div>
+	<div class="artist">
+		<a *ngFor="let artist of song.artists" [title]="artist.name"
+		   [routerLink]="'/artist/' + artist.id">{{ artist.name }}, </a>
+	</div>
+</div>
+<span class="ml-auto z-duration d-flex align-items-center">{{ song.duration | momentUnix }}</span>
+<div class="">
+	<div class="list-buttons">
+		<ul class="normal-view">
+			<li>
+				<a style="visibility: hidden;">
+					<i role="button" class="icon ic-mv">
+
+					</i>
+				</a>
+			</li>
+			<li>
+				<a class=" z-tooltip-btn" data-tip="true" data-for="karaoke-ZWDU0W8E">
+					<i role="button"
+					   class="icon ic-karaoke">
+					</i>
+				</a>
+			</li>
+			<li>
+				<a class="z-like-btn z-tooltip-btn" data-tip="true" data-for="like-ZWDU0W8E">
+					<i role="button"
+					   class="icon ic-like">
+
+					</i>
+				</a>
+			</li>
+			<li>
+				<a class=" z-tooltip-btn" data-tip="true" data-for="more-ZWDU0W8E">
+					<i role="button"
+					   class="icon ic-more">
+					</i>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

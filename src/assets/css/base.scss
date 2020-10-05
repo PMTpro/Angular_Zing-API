@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	outline: none;
+}
+
+body {
+	height: 1000px;
+	background: #f8f8f8;
+	padding-top: 80px;
+	font-size: 14px !important;
+}
+
+ol, p, ul {
+	padding: 0;
+	margin: 0;
+}
+
+.nav, ol, p, ul {
+	list-style: none;
+}
+
+a:hover {
+	color: #FF5722;
+	text-decoration: unset !important;
+}
